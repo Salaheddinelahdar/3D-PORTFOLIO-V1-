@@ -15,8 +15,7 @@ const Computers = ({ isMobile }) => {
         angle={0.12}
         penumbra={1}
         intensity={1}
-        // --- THIS LINE WAS REMOVED TO FIX THE CRASH ---
-        // castShadow 
+        // --- FIX: castShadow line removed ---
         shadow-mapSize={1024}
       />
       <pointLight intensity={2} />
@@ -48,7 +47,7 @@ const ComputersCanvas = () => {
   return (
     <Canvas
       frameloop='demand'
-      shadows={!isMobile} // Also disabled shadows on mobile
+      // --- FIX: shadows prop removed ---
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
